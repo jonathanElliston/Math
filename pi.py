@@ -11,3 +11,7 @@ def piByArctan(): #calculates pi by finding the arctangent of 1
         counter += 1
         guess -= 1/(counter*2-1)
     return (guess+previousGuess)*2 #return the average between the current guess and previous guess times 4
+
+
+def pi(): #this is so substituting in a new algorithm for calculating pi is easy
+    return piByArctan()
