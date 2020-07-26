@@ -1,11 +1,9 @@
 from roots import sqrt
 
 def badIsPrime(n): #the naive algorithm for a primality test: checking all even numbers < sqrt(n)
-	if n == 0 or n == 1: # 0 and 1 are neither prime nor composite, so I just print that they were passed in
-		print("passed 0 or 1 into primality test")
-		return
+	if n == 0 or n == 1: # 0 and 1 are neither prime nor composite, so I raise an error
+		raise ValueError("passed in " + str(n) + " to isPrime")
 	for i in range(2, int(sqrt(n)) + 2):
-		print(i)
 		if n%i == 0:
 			return False
 	return True
